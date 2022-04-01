@@ -1,0 +1,1 @@
+SELECT DISTINCT c.name FROM artist c WHERE c.artist_id NOT IN (SELECT DISTINCT z.artist_id FROM track t, artist z, album d WHERE t.genre_id = 6 AND t.album_id = d.album_id AND d.artist_id = z.artist_id) ORDER BY c.name ASC;

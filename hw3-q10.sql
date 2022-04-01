@@ -1,0 +1,1 @@
+SELECT DISTINCT a.name FROM playlist a WHERE a.playlist_id NOT IN (SELECT DISTINCT p.playlist_id FROM playlist_track p, track t WHERE t.track_id = p.track_id AND (t.genre_id = 1 OR t.genre_id = 6)) ORDER BY a.name ASC;

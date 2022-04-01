@@ -1,0 +1,1 @@
+SELECT sum(F.capacity) as totalcapacity FROM flights as F WHERE F.month_id = 7 AND ((F.origin_city = 'San Diego CA' AND F.dest_city = 'San Francisco CA') OR (F.origin_city = 'San Francisco CA' AND F.dest_city = 'San Diego CA')) AND F.day_of_month = 1;

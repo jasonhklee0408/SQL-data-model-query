@@ -1,0 +1,3 @@
+--The tuple was successfully inserted into the table. The first element of the tuple, '-1' is automatically cast into an integer. Since the second element is already a string, no modification from sql was required
+--The tuple was not inserted into the table, because the int is already present in the id column and serves as a primary key, therefore it is not possible to have 2 identical primary keys
+--The tuple was successfully inserted into the table because the NULL value is an acceptable storage class, and the id is blank since sql doesn't attempt to convert the NULL into an int class

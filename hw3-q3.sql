@@ -1,0 +1,1 @@
+SELECT A.origin_city, 100*(B.subtotal/A.total) as percentage FROM (SELECT Y.origin_city, CAST(count(*) as float) as total FROM flights Y GROUP BY Y.origin_city) as A LEFT OUTER JOIN (SELECT Z.origin_city, CAST(count(*) as float) as subtotal FROM flights Z WHERE Z.actual_time < 180 GROUP BY Z.origin_city) as B ON A.origin_city = B.origin_city ORDER BY percentage ASC;

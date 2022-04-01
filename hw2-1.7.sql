@@ -1,0 +1,1 @@
+SELECT A.Name, count(*) FROM artists as A, genres as G, tracks as T, albums as B WHERE G.Name = 'Blues' AND G.GenreId = T.GenreId AND T.AlbumId = B.AlbumId and B.artistId = A.artistId GROUP BY A.Name;

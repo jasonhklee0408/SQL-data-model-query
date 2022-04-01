@@ -1,0 +1,1 @@
+SELECT DISTINCT E.origin_city, X.dest_city, E.max FROM flights X, (SELECT DISTINCT F.origin_city, max(F.actual_time) FROM flights F GROUP BY F.origin_city) as E WHERE X.origin_city = E.origin_city AND X.actual_time = E.max ORDER BY E.origin_city, X.dest_city ASC;

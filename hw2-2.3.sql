@@ -1,0 +1,1 @@
+SELECT C.name, (100*(CAST(sum(F.canceled) as REAL))/count(*)) as percent FROM flights as F, carriers as C WHERE F.carrier_id = C.cid AND F.origin_city = 'San Diego CA' GROUP BY F.carrier_id HAVING percent > 1 ORDER BY percent ASC;
